@@ -16,54 +16,54 @@ class ColorModel {
 
 List<ColorModel> colorPalette = [
   ColorModel(
-    color: Colors.yellow,
+    color: const Color.fromARGB(255, 163, 151, 38),
     gradient: LinearGradient(
-      colors: [const Color.fromARGB(255, 88, 88, 88), Colors.yellow],
+      colors: [Colors.black, Colors.yellow],
       begin: Alignment.bottomLeft,
       end: Alignment.topLeft,
     ),
     svgPath: "assets/images/cloudy_yellow.svg",
   ),
   ColorModel(
-    color: Colors.blue,
+    color: const Color.fromARGB(255, 20, 91, 149),
     gradient: LinearGradient(
-      colors: [Colors.white, Colors.blue],
+      colors: [Colors.black, Colors.blue],
       begin: Alignment.bottomLeft,
       end: Alignment.topLeft,
     ),
     svgPath: "assets/images/cloudy_blue.svg",
   ),
   ColorModel(
-    color: Colors.green,
+    color: const Color.fromARGB(255, 44, 103, 46),
     gradient: LinearGradient(
-      colors: [Colors.white, Colors.green],
+      colors: [Colors.black, Colors.green],
       begin: Alignment.bottomLeft,
       end: Alignment.topLeft,
     ),
     svgPath: "assets/images/cloudy_green.svg",
   ),
   ColorModel(
-    color: Colors.red,
+    color: const Color.fromARGB(255, 135, 36, 29),
     gradient: LinearGradient(
-      colors: [Colors.white, Colors.red],
+      colors: [Colors.black, Colors.red],
       begin: Alignment.bottomLeft,
       end: Alignment.topLeft,
     ),
     svgPath: "assets/images/cloudy_red.svg",
   ),
   ColorModel(
-    color: Colors.purple,
+    color: const Color.fromARGB(255, 88, 23, 99),
     gradient: LinearGradient(
-      colors: [Colors.white, Colors.purple],
+      colors: [Colors.black, Colors.purple],
       begin: Alignment.bottomLeft,
       end: Alignment.topLeft,
     ),
     svgPath: "assets/images/cloudy_purple.svg",
   ),
   ColorModel(
-    color: Colors.pink,
+    color: const Color.fromARGB(255, 129, 16, 54),
     gradient: LinearGradient(
-      colors: [Colors.white, Colors.pink],
+      colors: [Colors.black, Colors.pink],
       begin: Alignment.bottomLeft,
       end: Alignment.topLeft,
     ),

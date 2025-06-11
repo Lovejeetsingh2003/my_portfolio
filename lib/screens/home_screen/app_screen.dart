@@ -7,7 +7,8 @@ import 'package:my_portfolio/providers/current_state.dart';
 import 'package:provider/provider.dart';
 
 class AppScreen extends StatelessWidget {
-  const AppScreen({super.key});
+  final bool isMobile;
+  const AppScreen({this.isMobile = false, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +80,7 @@ class AppScreen extends StatelessWidget {
                               fontSize: 14,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
                             ),
                           ),
                         ),
