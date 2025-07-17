@@ -29,13 +29,13 @@ class SkillContainer extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
-              color: Colors.black,
+              color: Colors.white,
             ),
             textAlign: TextAlign.center,
           ),
           if (icon != null || imagePath != null) SizedBox(width: 10),
           icon != null
-              ? Icon(icon!, size: 40)
+              ? Icon(icon!, size: 40, color: Colors.white)
               : imagePath != null
               ? Image.asset(imagePath!, width: 40, height: 40)
               : Container(),

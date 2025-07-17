@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/providers/current_state.dart';
 import 'package:my_portfolio/screens/home_screen/home_page.dart';
 import 'package:provider/provider.dart';
-
 import 'screens/home_screen/app_screen.dart';
 
 void main() {
@@ -16,7 +15,6 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final screenWidth = size.width;
-    print("screen width is: $screenWidth");
     final isMobile = screenWidth < 500;
 
     return MultiProvider(
