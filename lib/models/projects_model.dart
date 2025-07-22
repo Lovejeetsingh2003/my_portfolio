@@ -62,7 +62,7 @@ List<ProjectsModel> projects = [
     projectTech: "Flutter and Vscode",
     gitLink: "https://github.com/Lovejeetsingh2003/my_portfolio",
     videoLink:
-        "https://www.linkedin.com/posts/lovejeet-singh-3ba160279_plantopia-flutter-nodejs-activity-7263940422803103744-vqlE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPVBD4BeyH-Wqxe3CigAaWgXxUuNj-oSOM",
+        "https://www.linkedin.com/posts/lovejeet-singh-3ba160279_portfolio-flutterdeveloper-androiddevelopment-activity-7353457905985064960-nQ9h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPVBD4BeyH-Wqxe3CigAaWgXxUuNj-oSOM",
     coverPic: "${baseUrl}portfolio_cover.png",
   ),
 ];
