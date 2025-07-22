@@ -7,7 +7,9 @@ import 'package:my_portfolio/widgets/top_bar.dart';
 import 'package:provider/provider.dart';
 
 class SkillsScreen extends StatelessWidget {
-  const SkillsScreen({super.key});
+  final bool isMobile;
+
+  const SkillsScreen({this.isMobile = false, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class SkillsScreen extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
           child: Column(
             children: [
-              TopBar(title: "Skills"),
+              TopBar(title: "Skills", isMobile: isMobile),
               SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.all(20),

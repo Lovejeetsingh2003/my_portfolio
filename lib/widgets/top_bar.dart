@@ -5,7 +5,9 @@ import 'package:provider/provider.dart';
 
 class TopBar extends StatelessWidget {
   final String title;
-  const TopBar({required this.title, super.key});
+  final bool isMobile;
+
+  const TopBar({required this.isMobile, required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +15,9 @@ class TopBar extends StatelessWidget {
       context,
       listen: true,
     );
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -29,7 +31,11 @@ class TopBar extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              currentState.changeScreen(AppScreen());
+              if (isMobile) {
+                Navigator.of(context).pop();
+              } else {
+                currentState.changeScreen(AppScreen());
+              }
             },
             child: Icon(Icons.close, color: Colors.black, size: 35),
           ),

@@ -6,7 +6,7 @@ class AppModel {
   String? link;
   IconData? icon;
   Color color;
-  Widget? screen;
+  final Widget Function(bool)? screenBuilder;
 
   AppModel({
     required this.title,
@@ -14,6 +14,6 @@ class AppModel {
     this.assetPath,
     this.link,
     this.icon,
-    this.screen,
+    this.screenBuilder,
   }) : assert(icon == null || assetPath == null);
 }

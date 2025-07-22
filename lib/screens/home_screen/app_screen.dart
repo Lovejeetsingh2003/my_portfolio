@@ -16,7 +16,6 @@ class AppScreen extends StatelessWidget {
       context,
       listen: true,
     );
-
     return Container(
       alignment: Alignment.center,
       decoration: BoxDecoration(
@@ -46,9 +45,12 @@ class AppScreen extends StatelessWidget {
                           CustomButton(
                             margin: EdgeInsets.only(bottom: 5),
                             onPressed: () {
-                              if (apps[index].screen != null) {
-                                currentState.changeScreen(apps[index].screen!);
-                                print(apps[index].screen);
+                              if (apps[index].screenBuilder != null) {
+                                currentState.changeScreen(
+                                  apps[index].screenBuilder!(isMobile),
+                                  isMobile: isMobile,
+                                  context: context,
+                                );
                               } else if (apps[index].link != null) {
                                 currentState.openLink(apps[index].link!);
                               }
@@ -105,13 +107,21 @@ class AppScreen extends StatelessWidget {
               children: [
                 Text(
                   "Build Using ",
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    decoration: TextDecoration.none,
+                  ),
                   textAlign: TextAlign.center,
                 ),
                 Image.asset("assets/icons/flutter.png", width: 25, height: 25),
                 Text(
                   " With Too Much ❤️️",
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    color: Colors.white,
+                    fontSize: 14,
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ],

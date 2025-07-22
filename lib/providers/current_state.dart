@@ -10,9 +10,20 @@ class CurrentState extends ChangeNotifier {
   String quote = '"Everything you can imagine is real."';
   String quoteAUthor = "― Pablo Picasso";
 
-  void changeScreen(Widget screen) {
-    currentScreen = screen;
-    notifyListeners();
+  void changeScreen(
+    Widget screen, {
+    bool isMobile = false,
+    BuildContext? context,
+  }) {
+    if (isMobile == false) {
+      currentScreen = screen;
+      notifyListeners();
+    } else {
+      Navigator.of(
+        context!,
+      ).push(MaterialPageRoute(builder: (context) => screen));
+      notifyListeners();
+    }
   }
 
   Future<void> openLink(String link) async {

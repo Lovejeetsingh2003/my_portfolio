@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       FrostedContainer(
                         height: size.height / 2.4,
-                        width: size.width / 3.5,
+                        width: size.width / 4,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -60,15 +60,17 @@ class HomePage extends StatelessWidget {
                             Image.asset(
                               "assets/icons/my_sticker.png",
                               height: size.height / 3,
+                              width: size.width / 4,
+                              alignment: Alignment.centerLeft,
                             ),
-                            SizedBox(height: 10),
+                            SizedBox(height: 5),
                             Container(
                               alignment: Alignment.center,
                               child: Text(
                                 "Hi, I am Lovejeet Singh!",
                                 style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
                                   color: Colors.black,
                                 ),
                                 textAlign: TextAlign.center,
@@ -80,14 +82,13 @@ class HomePage extends StatelessWidget {
                       SizedBox(height: 20),
                       FrostedContainer(
                         height: size.height / 4.5,
-                        width: size.width / 3.5,
+                        width: size.width / 4,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             GestureDetector(
                               onTap: () {
-                                print("width ${size.width}");
                                 currentState.openLink(
                                   "https://linkedin.com/in/lovejeet-singh-3ba160279",
                                 );
@@ -103,8 +104,8 @@ class HomePage extends StatelessWidget {
                               child: Text(
                                 "Let's Connect",
                                 style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
                                   color: Colors.black,
                                 ),
                                 textAlign: TextAlign.center,
@@ -130,7 +131,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       FrostedContainer(
                         height: size.height / 2.4,
-                        width: size.width / 3.5,
+                        width: size.width / 4,
                         child: Center(
                           child: Wrap(
                             children: [
@@ -166,7 +167,7 @@ class HomePage extends StatelessWidget {
                       SizedBox(height: 20),
                       FrostedContainer(
                         height: size.height / 4.5,
-                        width: size.width / 3.5,
+                        width: size.width / 4,
                         child: Padding(
                           padding: const EdgeInsets.all(10),
                           child: Column(
@@ -176,7 +177,7 @@ class HomePage extends StatelessWidget {
                               Text(
                                 currentState.quote,
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.black,
                                 ),
@@ -186,7 +187,7 @@ class HomePage extends StatelessWidget {
                               Text(
                                 currentState.quoteAUthor,
                                 style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
                                 ),
